@@ -1,6 +1,6 @@
 #!/bin/bash
 
-PACKAGES=(python openssh vim screen fluxbox clementime thunderbird firefox terminator)
+PACKAGES=(python openssh vim screen fluxbox clementime thunderbird firefox terminator pidgin)
 
 sudo apt-get update
 for package in "${PACKAGES[@]}"
