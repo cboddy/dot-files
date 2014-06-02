@@ -1,4 +1,4 @@
 linux-profile
 =============
 
-Environment settings for fresh installs.
+Linux environment settings and applications for fresh installations.
