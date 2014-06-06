@@ -1,6 +1,6 @@
 #!/bin/bash
 
-PACKAGES=(python openssh vim screen fluxbox clementime thunderbird firefox terminator pidgin)
+PACKAGES=(python openssh vim screen fluxbox clementime thunderbird firefox terminator pidgin tomboy xchat arandr deluge)
 
 sudo pacman -Syy 
 for package in "${PACKAGES[@]}"
