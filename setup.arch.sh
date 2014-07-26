@@ -11,6 +11,7 @@ done
 cat bash/.bashrc >> ~/.bashrc
 
 cp vim/.vimrc ~/.vimrc
+cp vim/.vim ~/
 
 cp fluxbox/menu ~/.fluxbox/
 
