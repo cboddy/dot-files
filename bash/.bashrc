@@ -19,4 +19,5 @@ alias gv="evince"
 alias mkdit="mkdir"
 alias mount_usb="sudo mount /dev/sdb1 /mnt/usb"
 alias umount_usb="sudo umount /mnt/usb"
+alias latest="ls -lt |head"
 #sudo modprobe vboxdrv
