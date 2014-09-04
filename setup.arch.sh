@@ -1,6 +1,6 @@
 #!/bin/bash
 
-PACKAGES=(python openssh vim screen fluxbox clementime thunderbird firefox terminator pidgin tomboy xchat arandr deluge)
+PACKAGES=(python openssh vim screen fluxbox clementime thunderbird firefox terminator pidgin tomboy xchat arandr deluge liferea git)
 
 sudo pacman -Syy 
 for package in "${PACKAGES[@]}"
@@ -11,6 +11,7 @@ done
 cat bash/.bashrc >> ~/.bashrc
 
 cp vim/.vimrc ~/.vimrc
+cp vim/.vim ~/
 
 cp fluxbox/menu ~/.fluxbox/
 

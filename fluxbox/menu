@@ -18,8 +18,11 @@
 [encoding] {UTF-8}
 #      [exec] (terminal) {gnome-terminal}
       [exec] (terminal) {terminator}
+			[separator]
       [exec] (firefox) {firefox}
       [exec] (thunderbird) {thunderbird}
+      [exec] (liferea) {liferea}
+			[separator]
       [exec] (clementine) {clementine}
       [exec] (virtualbox) {virtualbox}
       [exec] (dropboxd) {dropboxd}
