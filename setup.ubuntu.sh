@@ -1,6 +1,6 @@
 #!/bin/bash
 
-PACKAGES=(python openssh vim screen fluxbox clementime thunderbird firefox terminator pidgin tomboy xchat arandr deluge liferea git fpm2 cifs-utils samba)
+PACKAGES=(python openssh vim screen fluxbox clementime thunderbird firefox terminator pidgin tomboy xchat arandr deluge liferea git fpm2 cifs-utils samba vlc-nox default-jdk steam)
 
 sudo apt-get update
 for package in "${PACKAGES[@]}"
