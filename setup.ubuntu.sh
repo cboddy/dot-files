@@ -40,3 +40,4 @@ cp fluxbox/menu ~/.fluxbox/
 
 cp fluxbox/init ~/.fluxbox/
 
+echo "Mod1 1 :RootMenu" >> ~/.fluxbox/keys
