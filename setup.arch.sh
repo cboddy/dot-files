@@ -13,8 +13,8 @@ cat bash/.bashrc >> ~/.bashrc
 cp vim/.vimrc ~/.vimrc
 cp vim/.vim ~/
 
+mkdir ~/.fluxbox
+
 cp fluxbox/menu ~/.fluxbox/
-
 cp fluxbox/init ~/.fluxbox/
-
 echo "Mod1 1 :RootMenu" >> ~/.fluxbox/keys

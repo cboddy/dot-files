@@ -36,8 +36,9 @@ mkdir -p ~/.vim/{ftdetect,indent,syntax} && for d in ftdetect indent syntax ; do
 ##
 ## fluxbox
 ##
+
+mkdir ~/.fluxbox
+
 cp fluxbox/menu ~/.fluxbox/
-
 cp fluxbox/init ~/.fluxbox/
-
 echo "Mod1 1 :RootMenu" >> ~/.fluxbox/keys
