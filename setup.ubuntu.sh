@@ -42,3 +42,9 @@ mkdir ~/.fluxbox
 cp fluxbox/menu ~/.fluxbox/
 cp fluxbox/init ~/.fluxbox/
 echo "Mod1 1 :RootMenu" >> ~/.fluxbox/keys
+
+
+##
+## node stuff
+##
+sudo npm install -g jshint
