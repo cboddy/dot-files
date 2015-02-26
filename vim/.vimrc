@@ -1,9 +1,3 @@
-" File: .vimrc
-" Author: Jake Zimmerman <jake@zimmerman.io>
-"
-" How I configure Vim :P
-"
-
 " Gotta be first
 set nocompatible
 
