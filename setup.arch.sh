@@ -13,6 +13,8 @@ cat bash/.bashrc >> ~/.bashrc
 cp vim/.vimrc ~/.vimrc
 cp vim/.vim ~/
 
+vim +PluginInstall +qall
+
 mkdir ~/.fluxbox
 
 cp fluxbox/menu ~/.fluxbox/

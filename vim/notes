@@ -1,0 +1,3 @@
+https://github.com/jez/vim-as-an-ide
+
+vim +PluginInstall +qall
