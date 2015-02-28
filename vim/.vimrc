@@ -106,9 +106,10 @@ let g:airline#extensions#tabline#enabled = 1
 
 " ----- jistr/vim-nerdtree-tabs -----
 " Open/close NERDTree Tabs with \t
-" nmap <silent> <leader>t :NERDTreeTabsToggle<CR>
+nmap <silent> <leader>t :NERDTreeTabsToggle<CR>
+let NERDTreeDirArrows=0 
 " To have NERDTree always open on startup
-" let g:nerdtree_tabs_open_on_console_startup = 1
+let g:nerdtree_tabs_open_on_console_startup = 1
 
 
 " ----- scrooloose/syntastic settings -----
