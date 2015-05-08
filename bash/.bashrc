@@ -22,4 +22,5 @@ alias umount_usb="sudo umount /mnt/usb"
 alias mount_pi=" sudo mount.cifs //pi/BigDrive /mnt/pi -o user=pi"
 alias umount_pi=" sudo umount /mnt/pi"
 alias latest="ls -lt |head"
+alias fuck='sudo $(history -p \!\!)'
 #sudo modprobe vboxdrv

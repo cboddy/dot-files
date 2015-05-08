@@ -46,9 +46,7 @@ vim +PluginInstall +qall
 
 mkdir ~/.fluxbox
 
-cp fluxbox/menu ~/.fluxbox/
-cp fluxbox/init ~/.fluxbox/
-echo "Mod1 1 :RootMenu" >> ~/.fluxbox/keys
+cp fluxbox/* ~/.fluxbox/
 
 
 ##

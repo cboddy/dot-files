@@ -1,0 +1,38 @@
+Mod1 1 :RootMenu
+
+# Normal window movement.
+OnTitlebar Move1 :StartMoving 
+OnLeftGrip Move1 :StartResizing bottomleft 
+OnRightGrip Move1 :StartResizing bottomright 
+OnWindowBorder Move1 :StartMoving 
+# alt + left/right click to move/resize a window
+OnWindow Mod1 Mouse1 :MacroCmd {Raise} {Focus} {StartMoving}
+OnWindow Mod1 Mouse3 :MacroCmd {Raise} {Focus} {StartResizing NearestCorner}
+
+#alt tab
+Mod1 Tab :NextWindow {static}
+Mod1 Shift Tab :PrevWindow {static}
+
+
+#XF86AudioMute
+#XF86AudioLowerVolume
+#XF86AudioRaiseVolume
+#
+
+None XF86AudioLowerVolume       :Exec amixer sset Master,0 5%-
+None XF86AudioRaiseVolume       :Exec amixer sset Master,0 5%+
+None XF86AudioMute              :Exec amixer sset Master,0 toggle
+
+XF86MonBrightnessDown :Exec xbacklight -dec 10
+XF86MonBrightnessUp :Exec xbacklight -inc 10
+
+XF86Search :RootMenu
+#XF86MonBrightnessDown
+#XF86AudioPrev
+#XF86AudioPlay
+#XF86AudioNext
+#
+#
+#Super_Lp
+#XF86MonBrightnessDown
+#XF86MonBrightnessUp
