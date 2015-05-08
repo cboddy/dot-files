@@ -45,6 +45,7 @@
       [separator]
       [exec] (arandr) {arandr}
       [exec] (battery) {./software/battery_check.py}
+      [exec] (system-monitor) {gnome-system-monitor}
       [exec] (exit) {./shutdown.sh}
       [separator]
 [submenu]  (other)
