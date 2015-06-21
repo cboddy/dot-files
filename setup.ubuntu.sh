@@ -14,7 +14,7 @@ PACKAGES=(python openssh vim screen fluxbox clementime thunderbird firefox termi
 sudo apt-get update
 for package in "${PACKAGES[@]}"
 do
-    sudo apt-get install $package
+    sudo apt-get -y install $package
 done
 
 ##
