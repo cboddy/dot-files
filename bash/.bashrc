@@ -23,4 +23,5 @@ alias mount_pi=" sudo mount.cifs //pi/BigDrive /mnt/pi -o user=pi"
 alias umount_pi=" sudo umount /mnt/pi"
 alias latest="ls -lt |head"
 alias fuck='sudo $(history -p \!\!)'
+alias ff="find . -iname"
 #sudo modprobe vboxdrv
