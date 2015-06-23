@@ -24,4 +24,6 @@ alias umount_pi=" sudo umount /mnt/pi"
 alias latest="ls -lt |head"
 alias fuck='sudo $(history -p \!\!)'
 alias ff="find . -iname"
+
+set GOPATH=$HOME/.go
 #sudo modprobe vboxdrv

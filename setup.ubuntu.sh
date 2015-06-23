@@ -9,7 +9,7 @@ sudo apt-add-repository ppa:webupd8team/java
 ##
 ## List of packages to install
 ##
-PACKAGES=(python openssh vim screen fluxbox clementime thunderbird firefox terminator pidgin tomboy xchat arandr deluge liferea git fpm2 cifs-utils samba vlc-nox default-jdk steam virtualbox-qt curl gitk openssh-server visualvm node npm zip oracle-java8-installer)
+PACKAGES=(python openssh vim screen fluxbox clementime thunderbird firefox terminator pidgin tomboy xchat arandr deluge liferea git fpm2 cifs-utils samba vlc-nox default-jdk steam virtualbox-qt curl gitk openssh-server visualvm node npm zip oracle-java8-installer golang-go)
 
 sudo apt-get update
 for package in "${PACKAGES[@]}"
@@ -39,7 +39,8 @@ cp vim/.vimrc ~/.vimrc
 cp vim/.vim ~/
 
 vim +PluginInstall +qall
-
+#ensure go plugin  stuff is installed
+vim -E -c GoInstallBinaries -c q
 ##
 ## fluxbox
 ##
