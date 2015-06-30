@@ -41,7 +41,7 @@ cat bash/.bashrc >> ~/.bashrc
 ## vim
 ##
 cp vim/.vimrc ~/.vimrc
-cp vim/.vim ~/
+cp -r vim/.vim ~/
 
 vim +PluginInstall +qall
 #ensure go plugin  stuff is installed
