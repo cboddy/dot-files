@@ -9,13 +9,18 @@ sudo apt-add-repository ppa:webupd8team/java
 ##
 ## List of packages to install
 ##
-PACKAGES=(python openssh vim screen fluxbox clementime thunderbird firefox terminator pidgin tomboy xchat arandr deluge liferea git fpm2 cifs-utils samba vlc-nox default-jdk steam virtualbox-qt curl gitk openssh-server visualvm node npm zip oracle-java8-installer golang-go)
+PACKAGES=(python openssh vim screen fluxbox clementime thunderbird firefox terminator pidgin tomboy xchat arandr deluge liferea git fpm2 cifs-utils samba vlc-nox default-jdk steam virtualbox-qt curl gitk openssh-server visualvm node npm zip oracle-java8-installer golang-go python-pip)
 
 sudo apt-get update
 for package in "${PACKAGES[@]}"
 do
     sudo apt-get -y install $package
 done
+
+##
+## pip installs
+##
+sudo pip install gcalcli
 
 ##
 ##
