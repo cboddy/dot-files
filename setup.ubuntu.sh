@@ -9,21 +9,13 @@
 ## List of packages to install
 ##
 
-INCLUDE_X=false
 
-if [[ $# -eq 1 ]] ; then 
-    INCLUDE_X=true; 
-fi ;
 
-echo "including X packages ? " $INCLUDE_X
-SERVER_PACKAGES=(python openssh vim screen deluge git cifs-utils samba default-jdk curl gitk openssh-server visualvm node npm zip oracle-java8-installer golang-go python-pip)
+##
+## List of packages to install
+##
+PACKAGES=(python openssh vim screen fluxbox clementime thunderbird firefox terminator pidgin tomboy xchat arandr deluge liferea git fpm2 cifs-utils samba vlc-nox default-jdk steam virtualbox-qt curl gitk openssh-server visualvm node npm zip oracle-java8-installer golang-go python-pip)
 
-X_PACKAGES=(fluxbox clementime thunderbird firefox terminator pidgin tomboy xchat arandr fpm2 vlc-noxsteam virtualbox-qt)
-
-PACKAGES=$SERVER_PACKAGES
-echo "installing packages " "${SERVER_PACKAGES}"
-
-return
 
 sudo apt-add-repository ppa:webupd8team/java
 sudo apt-get update
