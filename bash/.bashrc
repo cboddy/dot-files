@@ -17,8 +17,9 @@ alias umount_pi=" sudo umount /mnt/pi"
 alias latest="ls -lt |head"
 alias fuck='sudo $(history -p \!\!)'
 alias ff="find . -iname"
-alias push="git push origin master"
-alias pull="git pull --rebase origin master"
+alias gpush="git push origin master"
+alias gpull="git pull --rebase origin master"
+alias glog="git log --pretty=oneline --abbrev-commit"
 
 set GOPATH=$HOME/.go
 #sudo modprobe vboxdrv
