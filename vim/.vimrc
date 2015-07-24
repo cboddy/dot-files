@@ -73,7 +73,7 @@ set hlsearch
 
 syntax on
 
-set mouse=a
+" set mouse=a
 
 " ----- Plugin-Specific Settings --------------------------------------
 
