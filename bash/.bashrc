@@ -20,6 +20,7 @@ alias ff="find . -iname"
 alias gpush="git push origin master"
 alias gpull="git pull --rebase origin master"
 alias glog="git log --pretty=oneline --abbrev-commit"
+alias anki="anki -b ~/.anki"
 
 set GOPATH=$HOME/.go
 #sudo modprobe vboxdrv
