@@ -14,7 +14,7 @@
 ##
 ## List of packages to install
 ##
-PACKAGES=(python openssh vim screen fluxbox clementime thunderbird firefox terminator pidgin tomboy xchat arandr deluge liferea git fpm2 cifs-utils samba vlc-nox default-jdk steam virtualbox-qt curl gitk openssh-server visualvm node npm zip oracle-java8-installer golang-go python-pip gnupg anki)
+PACKAGES=(python openssh vim screen terminator git cifs-utils samba vlc-nox curl gitk openssh-server visualvm node npm zip oracle-java8-installer golang-go python-pip gnupg)
 
 
 sudo apt-add-repository ppa:webupd8team/java
@@ -49,6 +49,8 @@ cat bash/.bashrc >> ~/.bashrc
 ##
 cp vim/.vimrc ~/.vimrc
 cp -r vim/.vim ~/
+
+git clone https://github.com/gmarik/Vundle.vim ~/.vim/bundle/Vundle.vim
 
 vim +PluginInstall +qall
 #ensure go plugin  stuff is installed
