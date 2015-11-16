@@ -30,7 +30,7 @@
 			[separator]
 	  [exec] (anki) {python2 /home/chris/software/anki-2.0.15/runanki} 
       [exec] (tomboy) {dbus-launch tomboy}
-      [exec] (nautilus) {nautilus}
+      [exec] (nautilus) {nautilus --no-desktop}
       [exec] (eclipse) {eclipse}
       [exec] (intelli J) {/home/chris/software/idea-IC-135.480/bin/idea.sh}
 			[separator]
