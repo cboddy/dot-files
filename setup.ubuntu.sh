@@ -13,7 +13,7 @@ sudo apt-get install oracle-java8-installer
 ##
 ## List of packages to install
 ##
-PACKAGES=(python openssh vim screen terminator git cifs-utils samba vlc curl gitk openssh-server visualvm node npm zip golang-go python-pip gnupg zsh)
+PACKAGES=(python openssh vim screen terminator git cifs-utils samba vlc curl gitk openssh-server visualvm node npm zip golang-go python-pip gnupg zsh mdadm)
 
 for package in "${PACKAGES[@]}"
 do
