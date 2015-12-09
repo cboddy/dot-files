@@ -1,0 +1,58 @@
+---
+- hosts: localhost
+
+  tasks:  
+  - name: Install apt-packages
+    become: yes
+    apt: name={{ item }} state=present
+    with_items:
+                - python
+                - python-apt
+                - python-pycurl
+                - vim
+                - screen
+                - terminator
+                - git
+                - cifs-utils
+                - samba
+                - vlc
+                - curl
+                - gitk
+                - openssh-server
+                - visualvm
+                - node
+                - npm
+                - zip
+                - golang-go
+                - python-pip
+                - gnupg
+                - zsh
+                - i3
+#                - open-jdk-8
+    
+  - name: Copy vim config 
+    copy: 
+        src: vim/.vimrc 
+        dest: ~/.vimrc_test
+
+  - name: Copy vim dirs 
+    synchronize: 
+        src: vim/.vim 
+        dest: ~/.vim_test 
+
+  - name: Install Vundle
+    git:
+      repo: https://github.com/gmarik/Vundle.vim
+      dest: ~/test-vundle
+
+  - name: Install oh-my-zsh
+    command: sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" creates="~/.oh-my-zsh"
+
+#  - name: Install vim plugins 
+#    command: vim -E -c GoInstallBinaries -c q
+#
+#  - name: Install vim go-bindings 
+#    command: vim -E -c GoInstallBinaries -c q
+#
+
+...
