@@ -2,6 +2,37 @@
 - hosts: localhost
 
   tasks:  
+# install oracle java
+#- name: Add JRE ppa
+#  apt_repository: repo=ppa:webupd8team/java state=present
+#
+#- name: Automatically select the Oracle License
+#  shell: echo debconf shared/accepted-oracle-license-v1-1 select true | sudo debconf-set-selections
+#
+#- name: Install JRE
+#  apt: pkg=oracle-java8-installer state=latest update-cache=yes force=yes
+#
+  - name: Ensure sbt source location
+    become: yes
+    copy: 
+        content: "" 
+        dest: /etc/apt/sources.list.d/sbt.list 
+        force: no
+
+  - name: Add sbt source
+    become: yes
+    lineinfile:
+        dest: /etc/apt/sources.list.d/sbt.list
+        line: "deb https://dl.bintray.com/sbt/debian /"
+        state: present
+
+  - name: Add sbt source-key
+    become: yes
+    apt_key: 
+       id: 642AC823 
+       keyserver: hkp://keyserver.ubuntu.com:80
+       state: present
+
   - name: Install apt-packages
     become: yes
     apt: name={{ item }} state=present
@@ -27,7 +58,9 @@
                 - python-pip
                 - gnupg
                 - zsh
+                - mdadm
                 - i3
+                - sbt
 #                - open-jdk-8
     
   - name: Copy vim config 
@@ -37,7 +70,7 @@
 
   - name: Copy vim dirs 
     synchronize: 
-        src: vim/.vim 
+        src: vim/.vim/
         dest: ~/.vim_test 
 
   - name: Install Vundle
@@ -48,8 +81,9 @@
   - name: Install oh-my-zsh
     command: sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" creates="~/.oh-my-zsh"
 
-#  - name: Install vim plugins 
-#    command: vim +PluginInstall +qall
+
+  - name: Install vim plugins 
+    command: vim +PluginInstall +qall
 #
 #  - name: Install vim go-bindings 
 #    command: vim -E -c GoInstallBinaries -c q
