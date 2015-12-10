@@ -49,7 +49,7 @@
     command: sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" creates="~/.oh-my-zsh"
 
 #  - name: Install vim plugins 
-#    command: vim -E -c GoInstallBinaries -c q
+#    command: vim +PluginInstall +qall
 #
 #  - name: Install vim go-bindings 
 #    command: vim -E -c GoInstallBinaries -c q
