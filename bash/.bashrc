@@ -26,4 +26,7 @@ set GOPATH=$HOME/.go
 #sudo modprobe vboxdrv
 
 function debug() { java -Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=5005 $@;}
+
 function psgrep() { ps axuf | grep -v grep | grep "$@" -i --color=auto; }
+
+function killme() { ps aux |grep $1 |awk '{print $2}' |xargs kill -9; }
