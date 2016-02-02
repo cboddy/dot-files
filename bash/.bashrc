@@ -21,6 +21,7 @@ alias gpush="git push origin master"
 alias gpull="git pull --rebase origin master"
 alias glog="git log --pretty=oneline --abbrev-commit"
 alias anki="anki -b ~/.anki"
+alias lynx="lynx -cookies=1 -accept_all_cookies=1"
 
 set GOPATH=$HOME/.go
 #sudo modprobe vboxdrv
