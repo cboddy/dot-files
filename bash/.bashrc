@@ -22,6 +22,7 @@ alias gpull="git pull --rebase origin master"
 alias glog="git log --pretty=oneline --abbrev-commit"
 alias anki="anki -b ~/.anki"
 alias lynx="lynx -cookies=1 -accept_all_cookies=1"
+alias vim.vanilla="vim -u /dev/null"
 
 set GOPATH=$HOME/.go
 #sudo modprobe vboxdrv
@@ -33,4 +34,3 @@ function psgrep() { ps axuf | grep -v grep | grep "$@" -i --color=auto; }
 function psfind() { ps aux |grep $1; }
 function pskill() { ps aux |grep $1 |awk '{print $2}' |xargs kill -9; }
 
-function touchpad_toggle() {synclient TouchpadOff=$(synclient -l | grep -c 'TouchpadOff.*=.*0')}
