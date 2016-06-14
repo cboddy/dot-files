@@ -42,8 +42,6 @@ Plugin 'kchmck/vim-coffee-script'
 " ------ Go ------"
 Plugin 'fatih/vim-go'
 
-" -- Pydiction --"
-Plugin 'vim-scripts/pydiction'
 "
 " ---- Extras/Advanced plugins ----------------------------------------
 " Highlight and strip trailing whitespace
@@ -170,6 +168,5 @@ augroup mydelimitMate
   au FileType js let b:delimitMate_nesting_quotes = ['"', "'"]
 augroup END
 
-let g:pydiction_location = '/home/chris/.vim/bundle/pydiction/complete-dict'
-
+let g:jedi#popup_on_dot = 0
 

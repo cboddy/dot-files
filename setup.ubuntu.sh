@@ -43,6 +43,7 @@ cat bash/.bashrc >> ~/.zshrc
 ##
 cp vim/.vimrc ~/.vimrc
 cp -r vim/.vim ~/
+sud apt-get -y install vim-python-jedi 
 #
 git clone https://github.com/gmarik/Vundle.vim ~/.vim/bundle/Vundle.vim
 
