@@ -19,6 +19,10 @@ if os.path.exists(history_path):
 
 # save history file on REPL exit
 def save_history():
+    import readline, os.path
+    history_path = os.path.expanduser("~/.python_history")
     readline.write_history_file(history_path)
 
 atexit.register(save_history)
+
+del atexit, os, save_history, readline, rlcompleter, history_path 
