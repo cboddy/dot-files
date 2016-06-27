@@ -34,3 +34,5 @@ function psgrep() { ps axuf | grep -v grep | grep "$@" -i --color=auto; }
 function psfind() { ps aux |grep $1; }
 function pskill() { ps aux |grep $1 |awk '{print $2}' |xargs kill -9; }
 
+#python shell env setup
+export PYTHONSTARTUP=~/.pythonrc

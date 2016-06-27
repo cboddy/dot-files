@@ -39,6 +39,11 @@ cat bash/.bashrc >> ~/.bashrc
 cat bash/.bashrc >> ~/.zshrc
 
 ##
+## python shell env
+##
+cp python/.pythonrc ~/
+
+##
 ## vim
 ##
 cp vim/.vimrc ~/.vimrc
