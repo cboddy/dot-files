@@ -170,3 +170,6 @@ augroup END
 
 let g:jedi#popup_on_dot = 0
 
+" Enable folding (za)
+set foldmethod=indent
+set foldlevel=99
