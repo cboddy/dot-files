@@ -10,5 +10,5 @@
 #
 
 export DISPLAY=:0.0
-fbsetbg -f ~/wallpapers/$(ls ~/wallpapers | sort -R | tail -1)
+feh --bg-fill ~/wallpapers/$(ls ~/wallpapers | sort -R | tail -1)
 
