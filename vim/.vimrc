@@ -42,6 +42,10 @@ Plugin 'kchmck/vim-coffee-script'
 " ------ Go ------"
 Plugin 'fatih/vim-go'
 
+" ------ jedi-python ------"
+Plugin 'davidhalter/jedi-vim'
+
+
 "
 " ---- Extras/Advanced plugins ----------------------------------------
 " Highlight and strip trailing whitespace
