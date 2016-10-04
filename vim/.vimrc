@@ -173,6 +173,7 @@ augroup mydelimitMate
 augroup END
 
 let g:jedi#popup_on_dot = 0
+map <Leader>b Oimport pdb; pdb.set_trace() # BREAKPOINT<C-c>
 
 " Enable folding (za)
 set foldmethod=indent
