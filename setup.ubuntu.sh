@@ -4,4 +4,7 @@
 
 ./vim.sh
 
+./mutt.sh
+
 ./shells.sh
+
