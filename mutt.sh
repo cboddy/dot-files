@@ -6,6 +6,6 @@
 mkdir ~/.mutt
 
 ##
-## copy muttrc to config directory
+## copy muttrc and mailcap to config directory
 ##
 cp mutt/*  ~/.mutt
