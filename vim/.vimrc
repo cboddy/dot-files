@@ -43,10 +43,10 @@ Plugin 'kchmck/vim-coffee-script'
 Plugin 'fatih/vim-go'
 
 " ------ jedi-python ------"
-Plugin 'davidhalter/jedi-vim'
+" Plugin 'davidhalter/jedi-vim'
 
+Plugin 'vimwiki/vimwiki'
 
-"
 " ---- Extras/Advanced plugins ----------------------------------------
 " Highlight and strip trailing whitespace
 "Plugin 'ntpeters/vim-better-whitespace'
@@ -117,7 +117,7 @@ let g:airline#extensions#tabline#enabled = 1
 nmap <silent> <leader>t :NERDTreeTabsToggle<CR>
 let NERDTreeDirArrows=0 
 " To have NERDTree always open on startup
-let g:nerdtree_tabs_open_on_console_startup = 1
+let g:nerdtree_tabs_open_on_console_startup = 0 
 
 
 " ----- scrooloose/syntastic settings -----
@@ -178,3 +178,13 @@ map <Leader>b Oimport pdb; pdb.set_trace() # BREAKPOINT<C-c>
 " Enable folding (za)
 set foldmethod=indent
 set foldlevel=99
+
+" vimwiki
+let g:vimwiki_ext2syntax = {'.md': 'markdown'}
+let g:vimwiki_list = [{'path': '/home/chrirs/software/docs/wiki/', 'ext': '.md', 'syntax': 'markdown'}]
+
+"" Insert my journal template, and the current date
+nnoremap <silent><leader>nj :call NewJournal()<CR>
+function! NewJournal()
+     .-1read /home/chrirs/software/docs/wiki/diary/template.md
+endfunction
