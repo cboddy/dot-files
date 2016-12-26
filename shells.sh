@@ -15,5 +15,7 @@ cp python/.pythonrc ~/
 ##
 cat bash/.bashrc >> ~/.bashrc
 cat bash/.bashrc >> ~/.zshrc
+echo 'source /usr/share/virtualenvwrapper/virtualenvwrapper.sh' >> ~/.bashrc
+echo 'source /usr/share/virtualenvwrapper/virtualenvwrapper.sh' >> ~/.zshrc
 
 
