@@ -184,7 +184,7 @@ let g:vimwiki_ext2syntax = {'.md': 'markdown'}
 let g:vimwiki_list = [{'path': '/home/chrirs/software/docs/wiki/', 'ext': '.md', 'syntax': 'markdown'}]
 
 "" Insert my journal template, and the current date
-nnoremap <silent><leader>nj :call NewJournal()<CR>
 function! NewJournal()
      .-1read /home/chrirs/software/docs/wiki/diary/template.md
 endfunction
+nnoremap <silent><leader>nj :call NewJournal()<CR>
