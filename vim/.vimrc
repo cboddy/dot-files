@@ -181,10 +181,10 @@ set foldlevel=99
 
 " vimwiki
 let g:vimwiki_ext2syntax = {'.md': 'markdown'}
-let g:vimwiki_list = [{'path': '/home/chrirs/software/docs/wiki/', 'ext': '.md', 'syntax': 'markdown'}]
+let g:vimwiki_list = [{'path': '/home/chrirs/docs/wiki/', 'ext': '.md', 'syntax': 'markdown'}]
 
 "" Insert my journal template, and the current date
 function! NewJournal()
-     .-1read /home/chrirs/software/docs/wiki/diary/template.md
+     .-1read /home/chrirs/docs/wiki/diary/template.md
 endfunction
 nnoremap <silent><leader>nj :call NewJournal()<CR>
