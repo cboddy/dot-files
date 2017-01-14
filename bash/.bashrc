@@ -36,3 +36,18 @@ function pskill() { ps aux |grep $1 |awk '{print $2}' |xargs kill -9; }
 
 #python shell env setup
 export PYTHONSTARTUP=~/.pythonrc
+
+# setup virtualenv commands
+source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
+
+# check that tmux is installed
+if command -v tmux > /dev/null; then
+  # check that we're not already in screen or tmux; only via SSH connection (remote)
+  if [[ ! $TERM =~ screen ]] && [ -z $TMUX ] && [ -n "$SSH_CLIENT" ]; then
+     if tmux ls | grep -q admin; then
+        exec tmux attach -t admin
+     else
+        exec tmux new -s admin -n main
+     fi
+  fi
+fi
