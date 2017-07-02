@@ -1,56 +1,57 @@
-import os, sys, shutil, hashlib
-from os.path import *
+'''A script to backup a directory with rsync, and send an email status notification when the job completes.'''
 
-def md5sum(path, block_size=2**20):
-    md5 = hashlib.md5()
-    f = open(path, "r")
-    try :
-        while True:
-            data = f.read(block_size)
-            if not data:
-                break
-            md5.update(data)
-    finally :
-        f.close()
-    return md5.digest()
+import os.path
+import smtplib
+import subprocess
+import argparse
+import logging
+from email.mime.text import MIMEText
 
-def syncDirectory(srcDir, destDir):
-    for root, dirs, files in os.walk(srcDir, topdown=False):
-        for name in files:
-            print "root", root, "name", name
-            srcPath = os.path.join(root, name)
-            destPath = os.path.join(destDir, srcPath[len(srcDir):])
-            syncFile(srcPath, destPath)
+def send_email(to_address, email_server, email_user, email_password, msg_body, msg_header='Backup Status'):
+    """send an email message"""
+    server = smtplib.SMTP(email_server)
+    server.starttls()
+    server.login(email_user, email_password)
+    msg = MIMEText(msg_body)
+    msg['Subject'] = msg_header 
+    msg['From'] = email_user
+    msg['To'] = to_address
 
-def ensureDirectory(f):
-    d = os.path.dirname(f)
-    if not os.path.exists(d):
-        os.makedirs(d)
+    server.sendmail(email_user, to_address, msg.as_string())
+    server.quit()
 
-def syncFile(path, toPath):
-    try:
-        if not os.path.exists(toPath) or os.path.getsize(toPath) != os.path.getsize(path) or md5sum(path) != md5sum(toPath):
-            ensureDirectory(toPath) 
-            print "Updating ", path, "to", toPath
-            shutil.copy(path, toPath)
-    except: 
-        print "Problem syncing file ", path, "to", toPath
-        print sys.exc_info()
+def rsync(src_dir, dest_dir):
+    """rsync -avh src_dir  dest_dir"""
+    return subprocess.call(['rsync', '-avh', src_dir, dest_dir])
 
-def usage(): 
-    return """Recursively synchronizes the contents of a source directory to a destination directory. 
-
-    usage : 
-        python sync.py source-directory-path destination-directory-path
-    """
 def main(): 
-    if not len(sys.argv) == 3:
-        print usage()
-        return
+    parser = argparse.ArgumentParser('rsync with email notification')
+    parser.add_argument('-src', help='Path to source directory.', required=True)
+    parser.add_argument('-dest', help='Path to destination directory.', required=True)
+    parser.add_argument('-to-address', help='Email address to  send error reports.', required=True)
+    parser.add_argument('-username', help='Email username.', required=True)
+    parser.add_argument('-password', help='Email password.', required=True)
+    parser.add_argument('-server', help='Email server URL.', required=True)
+    parser.add_argument('-log-file', help='Log file path.', default=os.path.expanduser('~/.sync.log'))
+    args = parser.parse_args()
 
-    srcRootDir = sys.argv[1]
-    destRootDir = sys.argv[2]
-    syncDirectory(srcRootDir, destRootDir)
+    logging.basicConfig(filename=args.log_file, 
+                        level=logging.INFO,
+                        format='%(asctime)s %(message)s')
 
+    src, dest = args.src, args.dest
+    logging.info('Running rsync from {} to {}'.format(src, dest))
+    rc = rsync(src, dest)
+
+    status = 'Success' if not rc else 'Failure'
+    msg = 'rsync from {} to {} : {}'.format(src, dest, status)
+    logging.info(msg)
+
+    send_email(
+            args.to_address,
+            args.server,
+            args.username,
+            args.password,
+            msg)
 if __name__== "__main__":
     main()
