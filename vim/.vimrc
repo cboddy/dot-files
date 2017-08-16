@@ -46,7 +46,9 @@ Plugin 'fatih/vim-go'
 " Plugin 'davidhalter/jedi-vim'
 
 Plugin 'vimwiki/vimwiki'
+"--- Rust language  support ---"
 
+Plugin 'rust-lang/rust.vim'
 " ---- Extras/Advanced plugins ----------------------------------------
 " Highlight and strip trailing whitespace
 "Plugin 'ntpeters/vim-better-whitespace'
