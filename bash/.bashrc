@@ -51,3 +51,5 @@ if command -v tmux > /dev/null; then
      fi
   fi
 fi
+
+export TERM=xterm-256color

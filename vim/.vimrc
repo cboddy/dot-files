@@ -11,15 +11,12 @@ Plugin 'gmarik/Vundle.vim'
 " ----- Making Vim look good ------------------------------------------
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'tomasr/molokai'
-Plugin 'bling/vim-airline'
+Plugin 'itchyny/lightline.vim'
 
 " ----- Vim as a programmer's text editor -----------------------------
 Plugin 'scrooloose/nerdtree'
 Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'scrooloose/syntastic'
-Plugin 'xolox/vim-misc'
-Plugin 'xolox/vim-easytags'
-Plugin 'majutsushi/tagbar'
 Plugin 'kien/ctrlp.vim'
 Plugin 'vim-scripts/a.vim'
 
@@ -30,41 +27,18 @@ Plugin 'tpope/vim-fugitive'
 " ----- Other text editing features -----------------------------------
 Plugin 'Raimondi/delimitMate'
 
-" ----- man pages, tmux -----------------------------------------------
-Plugin 'jez/vim-superman'
 Plugin 'christoomey/vim-tmux-navigator'
-
-" ----- Syntax plugins ------------------------------------------------
-Plugin 'jez/vim-c0'
-Plugin 'jez/vim-ispc'
-Plugin 'kchmck/vim-coffee-script'
 
 " ------ Go ------"
 Plugin 'fatih/vim-go'
 
 " ------ jedi-python ------"
-" Plugin 'davidhalter/jedi-vim'
+Plugin 'davidhalter/jedi-vim'
 
 Plugin 'vimwiki/vimwiki'
 "--- Rust language  support ---"
 
 Plugin 'rust-lang/rust.vim'
-" ---- Extras/Advanced plugins ----------------------------------------
-" Highlight and strip trailing whitespace
-"Plugin 'ntpeters/vim-better-whitespace'
-" Easily surround chunks of text
-"Plugin 'tpope/vim-surround'
-" Align CSV files at commas, align Markdown tables, and more
-"Plugin 'godlygeek/tabular'
-" Automaticall insert the closing HTML tag
-"Plugin 'HTML-AutoCloseTag'
-" Make tmux look like vim-airline (read README for extra instructions)
-"Plugin 'edkolev/tmuxline.vim'
-" All the other syntax plugins I use
-"Plugin 'ekalinin/Dockerfile.vim'
-"Plugin 'digitaltoad/vim-jade'
-"Plugin 'tpope/vim-liquid'
-"Plugin 'cakebaker/scss-syntax.vim'
 
 call vundle#end()
 
@@ -82,37 +56,13 @@ syntax on
 
 " set mouse=a
 
-" ----- Plugin-Specific Settings --------------------------------------
-
-" ----- altercation/vim-colors-solarized settings -----
-" Toggle this to "light" for light colorscheme
-" set background=dark
-" set background=light
-
-" Uncomment the next line if your terminal is not configured for solarized
-"let g:solarized_termcolors=256
-
-" Set the colorscheme
-" colorscheme solarized
-
-
-" ----- bling/vim-airline settings -----
+" ----- lightline.vim  settings -----
 " Always show statusbar
 set laststatus=2
 
-" Fancy arrow symbols, requires a patched font
-" To install a patched font, run over to
-"     https://github.com/abertsch/Menlo-for-Powerline
-" download all the .ttf files, double-click on them and click "Install"
-" Finally, uncomment the next line
-"let g:airline_powerline_fonts = 1
-
-" Show PASTE if in paste mode
-let g:airline_detect_paste=1
-
-" Show airline for tabs too
-let g:airline#extensions#tabline#enabled = 1
-
+if !has('gui_running')
+    set t_Co=256
+  endif
 
 " ----- jistr/vim-nerdtree-tabs -----
 " Open/close NERDTree Tabs with \t
@@ -130,25 +80,6 @@ augroup mySyntastic
   au FileType tex let b:syntastic_mode = "passive"
 augroup END
 
-set ts=4
-set et
-set ic
-
-" ----- xolox/vim-easytags settings -----
-" Where to look for tags files
-set tags=./tags;,~/.vimtags
-" Sensible defaults
-let g:easytags_events = ['BufReadPost', 'BufWritePost']
-let g:easytags_async = 1
-let g:easytags_dynamic_files = 2
-let g:easytags_resolve_links = 1
-let g:easytags_suppress_ctags_warning = 1
-
-" ----- majutsushi/tagbar settings -----
-" Open/close tagbar with \b
-" nmap <silent> <leader>b :TagbarToggle<CR>
-" Uncomment to open tagbar automatically whenever possible
-"autocmd BufEnter * nested :call tagbar#autoopen(0)
 
 
 " ----- airblade/vim-gitgutter settings -----
@@ -190,3 +121,14 @@ function! NewJournal()
      .-1read /home/chrirs/docs/wiki/diary/template.md
 endfunction
 nnoremap <silent><leader>nj :call NewJournal()<CR>
+
+" rust format auto-save
+let g:rustfmt_autosave = 1
+
+" width of a tab space
+set tabstop=4
+set shiftwidth=4
+" expand tabs with spaces
+set et
+" ignore case in search 
+set ic
