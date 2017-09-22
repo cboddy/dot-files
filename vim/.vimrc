@@ -35,10 +35,14 @@ Plugin 'fatih/vim-go'
 " ------ jedi-python ------"
 Plugin 'davidhalter/jedi-vim'
 
+" --- vimwiki --- "
 Plugin 'vimwiki/vimwiki'
-"--- Rust language  support ---"
 
+"--- Rust language  support ---"
 Plugin 'rust-lang/rust.vim'
+
+" --- C-tags integration --- "
+Plugin 'majutsushi/tagbar'
 
 call vundle#end()
 
