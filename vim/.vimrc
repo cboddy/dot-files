@@ -147,3 +147,6 @@ let g:lightline = {
       \   'gitbranch': 'fugitive#head'
       \ },
       \ }
+
+" search ctrlp with regex by default
+let g:ctrlp_regexp_search = 1
