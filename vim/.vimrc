@@ -16,9 +16,10 @@ Plugin 'itchyny/lightline.vim'
 " ----- Vim as a programmer's text editor -----------------------------
 Plugin 'scrooloose/nerdtree'
 Plugin 'jistr/vim-nerdtree-tabs'
-Plugin 'scrooloose/syntastic'
+" Plugin 'scrooloose/syntastic'
 Plugin 'kien/ctrlp.vim'
 Plugin 'vim-scripts/a.vim'
+Plugin 'w0rp/ale'
 
 " ----- Working with Git ----------------------------------------------
 Plugin 'airblade/vim-gitgutter'
@@ -150,3 +151,7 @@ let g:lightline = {
 
 " search ctrlp with regex by default
 let g:ctrlp_regexp_search = 1
+
+" pip install flake8
+let g:ale_linters = {'python': ['flake8']}
+let g:ale_fixers = {'python': ['remove_trailing_lines', 'trim_whitespace']}
