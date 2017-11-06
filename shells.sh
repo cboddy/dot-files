@@ -8,7 +8,8 @@ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/i
 ##
 ## python shell env
 ##
-cp python/* ~/
+cp python/.py* ~/
+cp python/flake8 ~/.config
 
 
 ##

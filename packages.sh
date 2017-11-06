@@ -23,6 +23,11 @@ do
 done
 
 ##
+## python stuff
+##
+sudo pip install autopep8 flake8
+
+##
 ## node stuff
 ##
 sudo npm install -g jshint

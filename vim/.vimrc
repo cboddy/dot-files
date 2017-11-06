@@ -154,4 +154,4 @@ let g:ctrlp_regexp_search = 1
 
 " pip install flake8
 let g:ale_linters = {'python': ['flake8']}
-let g:ale_fixers = {'python': ['remove_trailing_lines', 'trim_whitespace']}
+let g:ale_fixers = {'python': ['autopep8', 'remove_trailing_lines', 'trim_whitespace']}
