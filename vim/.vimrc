@@ -35,6 +35,8 @@ Plugin 'fatih/vim-go'
 
 " ------ jedi-python ------"
 Plugin 'davidhalter/jedi-vim'
+" --- virtualenv integration for jedi--"
+Plugin 'jmcantrell/vim-virtualenv'
 
 " --- vimwiki --- "
 Plugin 'vimwiki/vimwiki'
@@ -142,16 +144,31 @@ let g:lightline = {
       \ 'colorscheme': 'wombat',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ,
+      \             [ 'venv', 'readonly'] ]
       \ },
       \ 'component_function': {
       \   'gitbranch': 'fugitive#head'
+      \    'venv': 'virtualenv#statusline'
       \ },
       \ }
 
 " search ctrlp with regex by default
 let g:ctrlp_regexp_search = 1
+let g:ctrlp_clear_cache_on_exit = 0
 
 " pip install flake8
 let g:ale_linters = {'python': ['flake8']}
 let g:ale_fixers = {'python': ['autopep8', 'remove_trailing_lines', 'trim_whitespace']}
+
+
+" Keep undo history across sessions by storing it in a file
+if has('persistent_undo')
+    let undo_dir = expand('$HOME/.vim/undo_dir')
+    if !isdirectory(undo_dir)
+        call mkdir(undo_dir, "", 0700)
+    endif
+    set undodir=$HOME/.vim/undo_dir
+    set undofile
+endif
+
