@@ -148,7 +148,7 @@ let g:lightline = {
       \             [ 'venv', 'readonly'] ]
       \ },
       \ 'component_function': {
-      \   'gitbranch': 'fugitive#head'
+      \   'gitbranch': 'fugitive#head',
       \    'venv': 'virtualenv#statusline'
       \ },
       \ }
