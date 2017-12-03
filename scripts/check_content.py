@@ -1,15 +1,17 @@
-import os
 import os.path
-from collections import defaultdict
 import argparse
 import subprocess
 
 
 def call(cmd):
+    """Run `cmd` in child process synchronously and return stdout."""
     proc = subprocess.Popen(cmd.split(),
                             stdout=subprocess.PIPE,
                             stderr=subprocess.PIPE)
     out, err = proc.communicate()
+    if proc.returncode != 0:
+        print err
+
     return out
 
 
@@ -26,7 +28,9 @@ def get_hash(f_path):
 
 
 def main():
-    parser = argparse.ArgumentParser("Check the existence and content of files in one (recursive) directory are matched in another, irrespective of location.")
+    parser = argparse.ArgumentParser(
+        """Check the existence and content of files in one (recursive)
+        directory  are matched in another, irrespective of location.""")
     parser.add_argument('--ref-dir', required=True)
     parser.add_argument('--test-dir', required=True)
     args = parser.parse_args()
@@ -46,7 +50,8 @@ def main():
         f_hash = get_hash(f_path)
         hashes = {get_hash(f) for f in ref_files}
         if f_hash not in hashes:
-            print('File  {} has different contents to {}!'.format(f_path, ref_files))
+            print('File  {} has different contents to {}!'.format(
+                f_path, ref_files))
 
 
 if __name__ == '__main__':
