@@ -10,10 +10,14 @@ sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 642AC823
 ## vim8
 sudo add-apt-repository ppa:jonathonf/vim
 
+## f.lux
+## https://github.com/xflux-gui/fluxgui
+sudo add-apt-repository ppa:nathan-renniewaldock/flux
+
 ##
 ## List of packages to install
 ##
-PACKAGES=(i3 python openssh vim screen terminator git cifs-utils samba vlc curl gitk openssh-server visualvm node npm zip golang-go python-pip gnupg zsh mdadm openjdk-8 pylint hg vim-python-jedi tree g++ mutt-patched anki linux-tools feh scala sbt lynx xclip virtualenvwrapper python-dev tmux exuberant-ctags)
+PACKAGES=(i3 python openssh vim screen terminator git cifs-utils samba vlc curl gitk openssh-server visualvm node npm zip golang-go python-pip gnupg zsh mdadm openjdk-8 pylint hg vim-python-jedi tree g++ mutt-patched anki linux-tools feh scala sbt lynx xclip virtualenvwrapper python-dev tmux exuberant-ctags fluxgui)
 
 sudo apt-get update
 
