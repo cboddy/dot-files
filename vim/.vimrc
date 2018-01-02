@@ -43,6 +43,7 @@ Plugin 'vimwiki/vimwiki'
 
 "--- Rust language  support ---"
 Plugin 'rust-lang/rust.vim'
+Plugin 'racer-rust/vim-racer'
 
 " --- C-tags integration --- "
 Plugin 'majutsushi/tagbar'
@@ -131,6 +132,9 @@ nnoremap <silent><leader>nj :call NewJournal()<CR>
 
 " rust format auto-save
 let g:rustfmt_autosave = 1
+" rust-racer specific
+set hidden
+let g:racer_experimental_completer = 1
 
 " width of a tab space
 set tabstop=4
@@ -159,7 +163,19 @@ let g:ctrlp_clear_cache_on_exit = 0
 
 " pip install flake8
 let g:ale_linters = {'python': ['flake8']}
-let g:ale_fixers = {'python': ['autopep8', 'remove_trailing_lines', 'trim_whitespace']}
+let g:ale_fixers = {
+            \ 'python': ['remove_trailing_lines', 'trim_whitespace', 'autopep8'], 
+            \ 'rust': ['rustfmt']
+            \}
+
+" call fustfmt --force via ALEFix
+call ale#Set('rust_rustfmt_options', '--force')  
+
+
+au FileType rust nmap gd <Plug>(rust-def)
+au FileType rust nmap gs <Plug>(rust-def-split)
+au FileType rust nmap gx <Plug>(rust-def-vertical)
+au FileType rust nmap <leader>gd <Plug>(rust-doc)
 
 
 " Keep undo history across sessions by storing it in a file
