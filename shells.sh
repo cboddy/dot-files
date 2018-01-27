@@ -24,3 +24,10 @@ echo 'source /usr/share/virtualenvwrapper/virtualenvwrapper.sh' >> ~/.zshrc
 ## tmux
 ##
 cp tmux/.tmux.conf ~/
+
+
+##
+## git 
+##
+cp .gitconfig ~/
+cp .git_templates ~/

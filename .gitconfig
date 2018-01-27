@@ -25,3 +25,5 @@
     editor=vim
 [push]
   default = current
+[init]
+    templatedir = ~/.git_templates
