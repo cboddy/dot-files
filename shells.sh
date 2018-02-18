@@ -31,3 +31,10 @@ cp tmux/.tmux.conf ~/
 ##
 cp .gitconfig ~/
 cp .git_templates ~/
+cp .gitigore ~/
+
+
+##
+## i3
+##
+cp i3 ~/.i3

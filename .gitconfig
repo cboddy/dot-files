@@ -13,6 +13,8 @@
     d = difftool
     update = commit -am "update"
     br = rev-parse --abbrev-ref HEAD 
+    statusu = status -uno
+    unwatch =  update-index --assume-unchanged
 [diff]
     tool = vimdiff
 [difftool]
