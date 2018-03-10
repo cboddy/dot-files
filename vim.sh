@@ -21,3 +21,4 @@ vim +PluginInstall +qall
 ## ensure go plugin stuff is installed
 ##
 vim -E -c GoInstallBinaries -c q
+
