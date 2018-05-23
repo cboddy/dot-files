@@ -32,6 +32,7 @@ cp tmux/.tmux.conf ~/
 cp .gitconfig ~/
 cp .git_templates ~/
 cp .gitigore ~/
+cp .git-prompt.sh ~/
 
 
 ##
