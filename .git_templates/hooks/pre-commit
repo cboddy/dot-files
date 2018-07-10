@@ -1,0 +1,5 @@
+## run autopep8 linter on any python files that are part of the commit 
+## and modify them in-place to conform to pep8
+git diff --cached --name-only | egrep '\.py$' | xargs --no-run-if-empty autopep8 -ri
+#re-index files staged for commit
+git diff --cached --name-only | egrep '\.py$'| xargs -l git add
