@@ -62,5 +62,5 @@ PS1='\u@\h: \w$(__git_ps1 " (%s)")\$ '
 
 
 # setup GOPATH
-export GOPATH=~/go
+export GOPATH=$(echo ~/go)
 mkdir -p $GOPATH 
