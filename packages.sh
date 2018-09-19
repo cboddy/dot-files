@@ -3,12 +3,12 @@
 ##
 ## PPA for SBT
 ##
-echo "deb https://dl.bintray.com/sbt/debian /" | sudo tee -a /etc/apt/sources.list.d/sbt.list
-sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 642AC823
+#echo "deb https://dl.bintray.com/sbt/debian /" | sudo tee -a /etc/apt/sources.list.d/sbt.list
+#sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 642AC823
 
 
 ## vim8
-sudo add-apt-repository ppa:jonathonf/vim
+#sudo add-apt-repository ppa:jonathonf/vim
 
 ## f.lux
 ## https://github.com/xflux-gui/fluxgui
@@ -34,4 +34,4 @@ sudo pip install autopep8 flake8 pipenv
 ##
 ## node stuff
 ##
-sudo npm install -g jshint
+#sudo npm install -g jshint

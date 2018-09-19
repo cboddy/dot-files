@@ -24,7 +24,6 @@ alias anki="anki -b ~/.anki"
 alias lynx="lynx -cookies=1 -accept_all_cookies=1"
 alias vim.vanilla="vim -u /dev/null"
 
-set GOPATH=$HOME/.go
 #sudo modprobe vboxdrv
 
 function debug() { java -Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=5005 $@;}
@@ -44,7 +43,7 @@ source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
 # check that tmux is installed
 if command -v tmux > /dev/null; then
   # check that we're not already in screen or tmux; only via SSH connection (remote)
-  if [[ ! $TERM =~ screen ]] && [ -z $TMUX ] && [ -n "$SSH_CLIENT" ]; then
+  if [[ ! $TERM =~ screen ]] && [ -z $TMUX ] ; then
      if tmux ls | grep -q admin; then
         exec tmux attach -t admin
      else
@@ -60,3 +59,8 @@ eval "$(pipenv --completion)"
 # add git-branch to prompt
 . ~/.git-prompt.sh
 PS1='\u@\h: \w$(__git_ps1 " (%s)")\$ '
+
+
+# setup GOPATH
+export GOPATH=~/go
+mkdir -p $GOPATH 

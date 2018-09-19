@@ -1,9 +1,5 @@
 #!/bin/bash
 
-#
-# Oh My ZSH
-#
-sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 ##
 ## python shell env
@@ -29,13 +25,13 @@ cp tmux/.tmux.conf ~/
 ##
 ## git 
 ##
-cp .gitconfig ~/
-cp .git_templates ~/
-cp .gitigore ~/
+cp  .gitconfig ~/
+cp -r .git_templates ~/
+cp .gitignore ~/
 cp .git-prompt.sh ~/
 
 
 ##
 ## i3
 ##
-cp i3 ~/.i3
+cp -r i3 ~/.i3
