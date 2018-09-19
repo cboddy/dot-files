@@ -29,7 +29,7 @@ done
 ##
 ## python stuff
 ##
-sudo pip install autopep8 flake8 pipenv
+pip install --user autopep8 flake8 pipenv pyotp
 
 ##
 ## node stuff
