@@ -114,7 +114,6 @@ augroup mydelimitMate
 augroup END
 
 let g:jedi#popup_on_dot = 0
-map <Leader>b Oimport pdb; pdb.set_trace() # BREAKPOINT<C-c>
 
 " Enable folding (za)
 set foldmethod=indent
@@ -188,3 +187,9 @@ if has('persistent_undo')
     set undofile
 endif
 
+
+" Macro for inserting a pdb breakpoint in python
+map <Leader>b Oimport pdb; pdb.set_trace() # BREAKPOINT<C-c>
+
+" Macro for error handling in golang
+map <Leader>e Oif err !=nil {<CR>    return err;<CR>}<C-c>
