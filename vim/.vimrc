@@ -121,11 +121,11 @@ set foldlevel=99
 
 " vimwiki
 let g:vimwiki_ext2syntax = {'.md': 'markdown'}
-let g:vimwiki_list = [{'path': '/home/chris/docs/wiki/', 'ext': '.md', 'syntax': 'markdown'}]
+let g:vimwiki_list = [{'path': '~/docs/wiki/', 'ext': '.md', 'syntax': 'markdown'}]
 
 "" Insert my journal template, and the current date
 function! NewJournal()
-     .-1read /home/chris/docs/wiki/diary/template.md
+     .-1read ~/docs/wiki/diary/template.md
 endfunction
 nnoremap <silent><leader>nj :call NewJournal()<CR>
 
@@ -189,7 +189,13 @@ endif
 
 
 " Macro for inserting a pdb breakpoint in python
-map <Leader>b Oimport pdb; pdb.set_trace() # BREAKPOINT<C-c>
+au FileType python nmap <Leader>b Oimport pdb; pdb.set_trace() # BREAKPOINT<C-c>
 
 " Macro for error handling in golang
-map <Leader>e Oif err !=nil {<CR>    return err;<CR>}<C-c>
+ au FileType go nmap <Leader>e Oif err !=nil {<CR>    return err;<CR>}<C-c>
+
+" Disable arrow keys in Escape mode
+map <up> <nop>
+map <down> <nop>
+map <left> <nop>
+map <right> <nop>
