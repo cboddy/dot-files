@@ -64,3 +64,10 @@ PS1='\u@\h: \w$(__git_ps1 " (%s)")\$ '
 # setup GOPATH
 export GOPATH=$(echo ~/go)
 mkdir -p $GOPATH 
+
+function view_ff() {
+    # convert markdown to html w/ pandoc and view in firefox
+    tmp_path=$(mktemp)
+    pandoc -s $1 > $tmp_path
+    firefox $tmp_path
+}
