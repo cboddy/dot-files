@@ -160,6 +160,7 @@ bar {
 ## startup apps
 ##
 exec nm-applet
+exec blueman-applet
 exec qutebrowser 
 exec terminator
 
