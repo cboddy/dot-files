@@ -17,6 +17,7 @@
     statusu = status -uno
     unwatch =  update-index --assume-unchanged
     undo-commit = reset --soft HEAD^
+    root-dir=rev-parse --show-toplevel
 [diff]
     tool = vimdiff
 [difftool]
