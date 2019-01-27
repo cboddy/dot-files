@@ -163,7 +163,7 @@ let g:ctrlp_clear_cache_on_exit = 0
 " pip install flake8
 let g:ale_linters = {'python': ['flake8']}
 let g:ale_fixers = {
-            \ 'python': ['remove_trailing_lines', 'trim_whitespace', 'autopep8'], 
+            \ 'python': ['remove_trailing_lines', 'trim_whitespace', 'autopep8', 'isort'], 
             \ 'rust': ['rustfmt']
             \}
 

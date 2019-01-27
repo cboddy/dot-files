@@ -29,7 +29,7 @@ done
 ## python stuff
 ##
 echo "INSTALLING PIP PACKAGES"
-pip install --user autopep8 flake8 pipenv pyotp
+pip install --user autopep8 flake8 pipenv pyotp isort
 
 ##
 ## node stuff
