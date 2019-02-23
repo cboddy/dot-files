@@ -25,9 +25,6 @@ Plugin 'w0rp/ale'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-fugitive'
 
-" ----- Other text editing features -----------------------------------
-Plugin 'Raimondi/delimitMate'
-
 Plugin 'christoomey/vim-tmux-navigator'
 
 " ------ Go ------"
@@ -96,22 +93,6 @@ hi clear SignColumn
 " In vim-airline, only display "hunks" if the diff is non-zero
 let g:airline#extensions#hunks#non_zero_only = 1
 
-
-" ----- Raimondi/delimitMate settings -----
-let delimitMate_expand_cr = 1
-augroup mydelimitMate
-  au!
-  au FileType markdown let b:delimitMate_nesting_quotes = ["`"]
-  au FileType tex let b:delimitMate_quotes = ""
-  au FileType tex let b:delimitMate_matchpairs = "(:),[:],{:},`:'"
-  au FileType python let b:delimitMate_nesting_quotes = ['"', "'"]
-  au FileType java let b:delimitMate_matchpairs = "(:),[:],{:}"
-  au FileType java let b:delimitMate_nesting_quotes = ['"', "'"]
-  au FileType scala let b:delimitMate_matchpairs = "(:),[:],{:}"
-  au FileType scala let b:delimitMate_nesting_quotes = ['"', "'"]
-  au FileType js let b:delimitMate_matchpairs = "(:),[:],{:}"
-  au FileType js let b:delimitMate_nesting_quotes = ['"', "'"]
-augroup END
 
 let g:jedi#popup_on_dot = 0
 
