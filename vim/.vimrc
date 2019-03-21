@@ -175,8 +175,8 @@ au FileType python nmap <Leader>b Oimport pdb; pdb.set_trace() # BREAKPOINT<C-c>
 " Macro for error handling in golang
  au FileType go nmap <Leader>e Oif err !=nil {<CR>    return err;<CR>}<C-c>
 
-" Disable arrow keys in Escape mode
-map <up> <nop>
-map <down> <nop>
-map <left> <nop>
-map <right> <nop>
+" spell checcking for markdown and text
+au FileType markdown setlocal spell
+au FileType text setlocal spell
+
+
