@@ -1,8 +1,8 @@
 #!/bin/bash
 
-SERVER_PACKAGES=(python openssh vim terminator git cifs-utils samba curl openssh-server visualvm node npm zip golang-go python-pip gnupg zsh mdadm openjdk-8 openjfx pylint hg vim-python-jedi tree g++ mutt-patched linux-tools scala sbt lynx virtualenvwrapper python-dev tmux exuberant-ctags autossh cron rsync gnupg1)
+SERVER_PACKAGES=(python openssh vim terminator git cifs-utils samba curl openssh-server visualvm node npm zip golang-go python-pip gnupg zsh mdadm openjdk-8 openjfx pylint hg vim-python-jedi tree g++ mutt-patched linux-tools scala sbt lynx virtualenvwrapper python-dev tmux exuberant-ctags autossh cron rsync gnupg1 xclip)
 
-DESKTOP_PACKAGES=(i3 blueman ubuntu-restricted-extras fluxgui xclip vlc gitk anki feh tor)
+DESKTOP_PACKAGES=(i3 blueman ubuntu-restricted-extras fluxgui vlc gitk anki feh tor)
 
 if [ ! -z $INCLUDE_DESKTOP];
 then
