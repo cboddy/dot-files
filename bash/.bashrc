@@ -68,6 +68,6 @@ mkdir -p $GOPATH
 function view_ff() {
     # convert markdown to html w/ pandoc and view in firefox
     tmp_path=$(mktemp)
-    pandoc -s $1 > $tmp_path
+    pandoc -s $1 --mathjax > $tmp_path
     firefox $tmp_path
 }
