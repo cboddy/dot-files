@@ -1,0 +1,4 @@
+[submodule "tmux/tmux-powerline"]
+	path = tmux/tmux-powerline
+	url = https://github.com/cboddy/tmux-powerline
+	branch = master
