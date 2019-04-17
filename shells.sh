@@ -20,6 +20,8 @@ echo 'source /usr/share/virtualenvwrapper/virtualenvwrapper.sh' >> ~/.zshrc
 ## tmux
 ##
 cp tmux/.tmux.conf ~/
+mkdir ~/.tmux.d
+cp -r tmux/tmux-powerline/ ~/.tmux.d
 
 
 ##
