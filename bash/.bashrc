@@ -21,7 +21,7 @@ alias gpush="git push origin master"
 alias gpull="git pull --rebase origin master"
 alias glog="git log --pretty=oneline --abbrev-commit"
 alias anki="anki -b ~/.anki"
-alias lynx="lynx -cookies=1 -accept_all_cookies=1 -image_links"
+alias lynx='lynx -cookies=1 -accept_all_cookies=1 -image_links -useragent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_0) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/21.0.1180.79 Safari/537.1"'
 alias vim.vanilla="vim -u /dev/null"
 
 #sudo modprobe vboxdrv
