@@ -71,3 +71,12 @@ function view_ff() {
     pandoc -s $1 --mathjax > $tmp_path
     firefox $tmp_path
 }
+
+function search_py_path() {
+    python -c "import sys; print [i for i in sys.path if '$1' in i]"
+}
+
+function search() {     
+    find . -type f -name "*${2:-.py}" | xargs grep "$1"; 
+}
+
