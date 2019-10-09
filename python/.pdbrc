@@ -1,2 +1,2 @@
-import os.path
-execfile(os.path.expanduser("~/.pdbrc.py"))
+import rlcompleter
+pdb.Pdb.complete=rlcompleter.Completer(locals()).complete
