@@ -80,3 +80,5 @@ function search() {
     find . -type f -name "*${2:-.py}" | xargs grep "$1"; 
 }
 
+alias py.test = "py.test --pdbcls=pdb:Pdb"
+alias pytest = "pytest --pdbcls=pdb:Pdb"
