@@ -65,20 +65,29 @@ PS1='\u@\h: \w$(__git_ps1 " (%s)")\$ '
 export GOPATH=$(echo ~/go)
 mkdir -p $GOPATH 
 
-function view_ff() {
+view_ff() {
     # convert markdown to html w/ pandoc and view in firefox
     tmp_path=$(mktemp)
     pandoc -s $1 --mathjax > $tmp_path
     firefox $tmp_path
 }
 
-function search_py_path() {
+search_py_path() {
     python -c "import sys; print [i for i in sys.path if '$1' in i]"
 }
 
-function search() {     
+search() {     
     find . -type f -name "*${2:-.py}" | xargs grep "$1"; 
 }
+
+print_xml(){
+    python3 -c "import sys; import xml.dom.minidom;  print(xml.dom.minidom.parse(sys.stdin).toprettyxml())"
+}
+
+print_json(){
+    python -m json.tool
+}
+
 
 alias py.test = "py.test --pdbcls=pdb:Pdb"
 alias pytest = "pytest --pdbcls=pdb:Pdb"
