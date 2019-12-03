@@ -19,6 +19,8 @@ Plugin 'jistr/vim-nerdtree-tabs'
 " Plugin 'scrooloose/syntastic'
 Plugin 'kien/ctrlp.vim'
 Plugin 'vim-scripts/a.vim'
+
+let g:ale_lint_on_enter = 0
 Plugin 'w0rp/ale'
 
 " ----- Working with Git ----------------------------------------------
