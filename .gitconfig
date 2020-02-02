@@ -18,7 +18,8 @@
     statusu = status -uno
     unwatch =  update-index --assume-unchanged
     undo-commit = reset --soft HEAD^
-    root-dir=rev-parse --show-toplevel
+    root-dir = rev-parse --show-toplevel
+    untracked = ls-files --others --exclude-standard
 [diff]
     tool = vimdiff
 [difftool]
