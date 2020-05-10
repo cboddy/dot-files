@@ -8,7 +8,8 @@ if [ ! -z $INCLUDE_DESKTOP];
 then
     ## f.lux
     ## https://github.com/xflux-gui/fluxgui
-    sudo add-apt-repository ppa:nathan-renniewaldock/flux
+    #sudo add-apt-repository ppa:nathan-renniewaldock/flux
+    echo ""
 fi
 
 ##

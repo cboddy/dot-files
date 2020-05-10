@@ -89,5 +89,4 @@ print_json(){
 }
 
 
-alias py.test = "py.test --pdbcls=pdb:Pdb"
-alias pytest = "pytest --pdbcls=pdb:Pdb"
+alias pytest="pytest --pdbcls=pdb:Pdb"
