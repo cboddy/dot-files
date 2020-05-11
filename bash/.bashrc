@@ -54,7 +54,6 @@ fi
 
 export TERM=xterm-256color
 
-eval "$(pipenv --completion)"
 
 # add git-branch to prompt
 . ~/.git-prompt.sh
