@@ -31,7 +31,7 @@ function debug() { java -Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=y
 function psgrep() { ps axuf | grep -v grep | grep "$@" -i --color=auto; }
 
 function psfind() { ps aux |grep $1; }
-function pskill() { ps aux |grep $1 |awk '{print $2}' |xargs kill -9; }
+function pskill() { ps aux |grep $1 | grep -v grep |awk '{print $2}' |xargs kill -9; }
 
 function checkip() { curl https://checkip.perfect-privacy.com/json |python -m json.tool; }
 #python shell env setup
