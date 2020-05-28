@@ -20,6 +20,9 @@
     undo-commit = reset --soft HEAD^
     root-dir = rev-parse --show-toplevel
     untracked = ls-files --others --exclude-standard
+    u = commit -am "update"
+    pull4 = pull -4
+    push4 = push -4
 [diff]
     tool = vimdiff
 [difftool]
