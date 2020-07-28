@@ -33,6 +33,7 @@
     required = true
 [core]
     editor=vim
+    pager = less -p ^\\(commit\\|diff\\)
 [push]
   default = current
 [init]
