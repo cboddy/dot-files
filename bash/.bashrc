@@ -88,4 +88,18 @@ print_json(){
 }
 
 
+
 alias pytest="pytest --pdbcls=pdb:Pdb"
+
+# quick navigation
+mkdir -p ~/.marks
+export CDPATH=.:~/.marks/
+mark() {
+    ln -sr "$(pwd)" ~/.marks/"$1"
+}
+
+#    mark @name      # create a bookmark
+#    cd @name        # jump to bookmark
+#    cd @<tab>       # list bookmarks
+#    cd @n<tab>      # auto-complete
+#    cd @name/<tab>  # can access sub-directories within bookmarks
