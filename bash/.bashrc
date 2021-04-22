@@ -92,6 +92,7 @@ print_json(){
 alias pytest="pytest --pdbcls=pdb:Pdb"
 
 # quick navigation
+# $CDPATH is “a colon-separated list of directories used as a search path for the cd built-in command.”
 mkdir -p ~/.marks
 export CDPATH=.:~/.marks/
 mark() {
