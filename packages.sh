@@ -30,7 +30,7 @@ done
 ## python stuff
 ##
 echo "INSTALLING PIP PACKAGES"
-pip install --user autopep8 flake8 pipenv pyotp isort
+pip install --user autopep8 flake8 pipenv pyotp isort youtube-dl
 
 ##
 ## node stuff
