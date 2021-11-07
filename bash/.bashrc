@@ -104,3 +104,7 @@ mark() {
 #    cd @<tab>       # list bookmarks
 #    cd @n<tab>      # auto-complete
 #    cd @name/<tab>  # can access sub-directories within bookmarks
+
+youtube_dl_mp3() {
+    youtube-dl  --extract-audio  --audio-quality 0 --audio-format mp3   -f "bestaudio/best" -ciw -o "%(title)s.%(ext)s" $1
+}
