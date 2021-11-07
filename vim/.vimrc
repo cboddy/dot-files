@@ -181,4 +181,5 @@ au FileType python nmap <Leader>b Oimport pdb; pdb.set_trace() # BREAKPOINT<C-c>
 au FileType markdown setlocal spell
 au FileType text setlocal spell
 
-
+" Use interactive shell - (runs ~/.bashrc)
+set shellcmdflag=-ic
