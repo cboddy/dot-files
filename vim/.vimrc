@@ -182,4 +182,4 @@ au FileType markdown setlocal spell
 au FileType text setlocal spell
 
 " Use interactive shell - (runs ~/.bashrc)
-set shellcmdflag=-ic
+" set shellcmdflag=-ic

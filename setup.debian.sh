@@ -9,7 +9,7 @@
 
 ./rust.sh
 
-./mutt.sh
+# ./mutt.sh
 
 ./shells.sh
 

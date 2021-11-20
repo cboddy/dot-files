@@ -13,8 +13,8 @@ cp python/{flake8,pep8} ~/.config
 ##
 cat bash/.bashrc >> ~/.bashrc
 cat bash/.bashrc >> ~/.zshrc
-echo 'source /usr/share/virtualenvwrapper/virtualenvwrapper.sh' >> ~/.bashrc
-echo 'source /usr/share/virtualenvwrapper/virtualenvwrapper.sh' >> ~/.zshrc
+#echo 'source /usr/share/virtualenvwrapper/virtualenvwrapper.sh' >> ~/.bashrc
+#echo 'source /usr/share/virtualenvwrapper/virtualenvwrapper.sh' >> ~/.zshrc
 
 ##
 ## tmux
