@@ -1,5 +1,4 @@
-HISTSIZE=10000
-alias python="python2"
+HISTSIZE=50000
 alias x="xterm -fn 7x13 &"
 alias v="vim"
 alias vmi="vim"
@@ -106,5 +105,9 @@ mark() {
 #    cd @name/<tab>  # can access sub-directories within bookmarks
 
 youtube_dl_mp3() {
-    youtube-dl  --extract-audio  --audio-quality 0 --audio-format mp3   -f "bestaudio/best" -ciw -o "%(title)s.%(ext)s" $1
+    yt-dlp  --extract-audio  --audio-quality 0 --audio-format mp3   -f "bestaudio/best" -ciw -o "%(title)s.%(ext)s" $1
+}
+
+t() {
+    tmux a -d || tmux
 }

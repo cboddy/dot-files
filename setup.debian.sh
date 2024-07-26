@@ -7,8 +7,6 @@
 
 ./vim.sh
 
-./rust.sh
-
 # ./mutt.sh
 
 ./shells.sh
