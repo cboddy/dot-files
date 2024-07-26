@@ -31,7 +31,7 @@ done
 ##
 echo "INSTALLING PIP PACKAGES"
 pipx ensurepath
-pipx install autopep8 flake8 pyotp isort youtube-dlp i3-workspace-names-daemon
+pipx install black pyotp isort yt-dlp i3-workspace-names-daemon
 
 ##
 ## node stuff
