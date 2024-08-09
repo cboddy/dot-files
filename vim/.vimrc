@@ -170,6 +170,12 @@ if has('persistent_undo')
     set undofile
 endif
 
+function CreateAndSetTags()
+    exec ':!ctags -R --languages=python -o tags $VIRTUAL_ENV `git rev-parse --show-toplevel`'
+    set tags=./tags,tags
+endfunction
+nmap <silent> <F4> :call CreateAndSetTags()<CR>
+" C-], tn, tb, F4
 
 " Macro for inserting a pdb breakpoint in python
 au FileType python nmap <Leader>b Oimport pdb; pdb.set_trace() # BREAKPOINT<C-c>
