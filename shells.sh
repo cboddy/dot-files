@@ -36,3 +36,6 @@ cp -r i3 ~/.i3
 
 
 gsettings set org.gnome.shell.extensions.dash-to-dock show-trash false
+
+# ipython
+cp python/ipython_startup.py ~/.ipython/profile_default/startup
